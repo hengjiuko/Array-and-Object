@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象的封装</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var _obj={
+			_arr:[
+              {
+              	keys:"a",
+              	val:1
+              },
+              {
+              	keys:"b",
+              	val:0
+              },
+              {
+              	keys:"c",
+              	val:0
+              },
+              {
+              	keys:"d",
+              	val:1
+              }
+			]
+		}
+		var _arrObj=_obj._arr;//此时，_arrObj是一个数组，用两种方法遍历
+		//第一种遍历数组的方法
+		for(var i in _arrObj){
+			if(_arrObj[i].val==1){
+				console.log(_arrObj[i]);
+			}
+		}
+		//第二种遍历数组的方法
+		for(var i=0;i<_arrObj.length;i++){
+			if(_arrObj[i].val==0){
+				console.log(_arrObj[i]);
+			}
+		}
+		//用函数封装来操作对象
+		function filterFn( obj ){
+			//tempArr是一个空数组，作为筛选结果的容器
+            var tempArr=[];
+			for(var i in obj){
+			if(obj[i].val==1){
+			   tempArr.push(obj[i]);
+			  }
+		   }
+		   return tempArr;
+		}
+		var result=filterFn(_arrObj);
+		console.log(result);
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

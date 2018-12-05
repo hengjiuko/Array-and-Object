@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象的使用</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//可以这么写，但不推荐，因为有时键值
+		//和操作不在一个js文件里，不利于维护
+		var b=123;
+		var obj={
+			a:111,
+			b,
+			c:555
+		}
+		console.log(obj);
+		for(var i in obj){
+			console.log(obj[i]);
+		}
+	</script>
+</body>
+</html>

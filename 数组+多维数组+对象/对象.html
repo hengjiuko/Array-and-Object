@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//一.生成Object对象的一个实例
+		var obj1=new Object();
+		obj1.name="Marry";
+		obj1.age=15;
+		console.log(obj1.name);
+
+		//二.对象字面量
+		var obj2={};
+		obj2.name="Marry";
+		obj2.age=15;
+		console.log(obj2.age);
+		//三.直接创建对象
+		var obj3={
+			name:"Marry",
+			age:15
+		}
+		console.log(obj3.age);
+
+		//处理对象中的数据
+		for(var i in obj3){
+			//i是键，   obj3[i]是键所对应那个值
+			console.log(obj3[i]);
+		}
+		
+        
+	</script>
+</body>
+</html>
